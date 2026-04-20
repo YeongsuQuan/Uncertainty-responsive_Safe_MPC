@@ -1,4 +1,4 @@
-function [Sval] = gen_Sval(t_acc,ts,v_bar,a_bar_low,a_bar_high,N,xt)
+function [Sval] = gen_sval(t_acc,ts,v_bar,a_bar_low,a_bar_high,N,xt)
 
 
 % System model - continuous time
@@ -35,7 +35,7 @@ nqx    =   size(Cx,1);
 
 % Build overall matrices and vectors for LP 
 
-[~,~,Lambda_x,Gamma_x]     =   Traj_matrices(N,A,B,C,D);
+[~,~,Lambda_x,Gamma_x]     =   traj_matrices(N,A,B,C,D);
 Cubar                                   =   zeros(N*nqu,N*nu);
 dubar                                   =   zeros(N*nqu,1);
 Cxbar                                   =   zeros((N+1)*nqx,(N+1)*nx);

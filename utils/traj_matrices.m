@@ -1,5 +1,5 @@
-function [Lambda_y,Gamma_y,Lambda_xi,Gamma_xi]=Traj_matrices(M,A,B,C,D)
-% TRAJ_MATRICES Computes the matrices that relate the state and output
+function [Lambda_y,Gamma_y,Lambda_xi,Gamma_xi]=traj_matrices(M,A,B,C,D)
+% traj_matrices Computes the matrices that relate the state and output
 % trajectories of a LTI system to the initial condition and input sequence
 % from the current time t up to t+N:
 %                   XI  =   Lambda_xi*xi0+Gammma_xi*U

@@ -241,10 +241,10 @@
         obs_pos = position_list{1, k}(active_index(1):active_index(end),1)-d0;
         Vref(iV('x',active_index(1):active_index(end),'s')) = obs_pos;
 
-        [Sval_min] = gen_Sval(t_acc,ts,v_bar,a_bar_low,a_bar_high,...
+        [Sval_min] = gen_sval(t_acc,ts,v_bar,a_bar_low,a_bar_high,...
                                     active_index(1),xt);
         if Sval_min >= obs_pos(1)
-            [Sval_min_2] = gen_Sval(t_acc,ts,v_bar,a_bar_low_2,a_bar_high_2,...
+            [Sval_min_2] = gen_sval(t_acc,ts,v_bar,a_bar_low_2,a_bar_high_2,...
                                     active_index(1),xt);
             if Sval_min_2 >= obs_pos(1)
                 a_bar_high = a_bar_high_2;
@@ -259,9 +259,9 @@
     end
 
     % obstain delta for each driving mode
-    [Sval_list_1] = gen_Delta(t_acc,ts,v_bar,a_bar_low_1,a_bar_high_1,xt,M);
-    [Sval_list_2] = gen_Delta(t_acc,ts,v_bar,a_bar_low_2,a_bar_high_2,xt,M);
-    [Sval_list_3] = gen_Delta(t_acc,ts,v_bar,a_bar_low_3,a_bar_high_3,xt,M);
+    [Sval_list_1] = gen_sval_list(t_acc,ts,v_bar,a_bar_low_1,a_bar_high_1,xt,M);
+    [Sval_list_2] = gen_sval_list(t_acc,ts,v_bar,a_bar_low_2,a_bar_high_2,xt,M);
+    [Sval_list_3] = gen_sval_list(t_acc,ts,v_bar,a_bar_low_3,a_bar_high_3,xt,M);
 
     % adaptive a priori known constraint for acceleration
     lbv(iV('x',1:M,'a')) = a_bar_low*ones(size(iV('x',1:M,'a')));

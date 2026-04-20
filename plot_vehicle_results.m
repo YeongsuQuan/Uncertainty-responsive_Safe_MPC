@@ -15,7 +15,7 @@ filename_v = 'v_ZOD.eps';
 filename_s1 = 'x1_ZOD.eps';
 filename_s2 = 'x2_mode_ZOD.eps';
 filename_a_areq = 'a_a_req_ZOD.eps';
-path_fig = '/Users/quany/Library/CloudStorage/OneDrive-Chalmers/Documents/MPFTC/writings/figures/';
+path_fig = 'figures/';  % update this path to save figures elsewhere
 
 ey_bar = 0.4;
 e_psi_bar = 0.61;
